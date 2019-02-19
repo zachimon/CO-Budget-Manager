@@ -13,8 +13,13 @@
                 <Entry Text="{Binding Username}"
                        Placeholder="Username"/>
                 <Entry Text="{Binding Password}"
-                       Placeholder="Password"/>
+                       Placeholder="Password"
+                       IsPassword="True"/>
+                <Label Text="Invalid credentials entered" 
+                       IsVisible="{Binding AreCredentialsInvalid}" 
+                       TextColor="Red" />
             </StackLayout>
+            <Button Grid.Row="2" Text="Authenticate" Command="{Binding AuthenticateCommand}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
